@@ -1,0 +1,30 @@
+### Health Check
+GET http://localhost:5000
+
+### Sign Up
+POST http://localhost:5000/api/v1/auth/sign-up
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "password123"
+}
+
+### Sign In
+POST http://localhost:5000/api/v1/auth/sign-in
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "password123"
+}
+
+### Get Current User (requires authentication)
+GET http://localhost:5000/api/v1/auth/me
+
+### Refresh Token
+POST http://localhost:5000/api/v1/auth/refresh-token
+
+### Sign Out
+POST http://localhost:5000/api/v1/auth/sign-out
